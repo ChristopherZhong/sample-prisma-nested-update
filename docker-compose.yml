@@ -1,0 +1,10 @@
+services:
+  database:
+    environment:
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_USER: ${DATABASE_USER}
+    image: postgres:alpine
+    ports:
+      - published: ${DATABASE_PORT}
+        target: 5432
